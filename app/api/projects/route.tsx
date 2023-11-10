@@ -9,7 +9,7 @@ type Data = {
   projects: Project[];
 };
 
-export async function GET(req: NextApiRequest, res: NextApiResponse<Data>) {
+export async function GET(req: Request, res: NextApiResponse<Data>) {
   const projects: Project[] = await client.fetch(query);
 
   return Response.json({ projects });

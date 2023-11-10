@@ -9,7 +9,7 @@ type Data = {
   skills: Skill[];
 };
 
-export async function GET(req: NextApiRequest, res: NextApiResponse<Data>) {
+export async function GET(req: Request, res: NextApiResponse<Data>) {
   const skills: Skill[] = await client.fetch(query);
 
   return Response.json({ skills });

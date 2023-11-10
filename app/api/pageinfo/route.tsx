@@ -9,7 +9,7 @@ type Data = {
   pageInfo: PageInfo;
 };
 
-export async function GET(req: NextApiRequest, res: NextApiResponse<Data>) {
+export async function GET(req: Request, res: NextApiResponse<Data>) {
   const pageInfo: PageInfo = await client.fetch(query);
 
   return Response.json({ pageInfo });
