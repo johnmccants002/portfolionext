@@ -9,7 +9,7 @@ type Props = {
   experience: Experience;
 };
 
-function formatDate(date) {
+function formatDate(date: any) {
   // Get the month, day, and year from the date object
   var month = date.getMonth() + 1; // Months are zero-based
   var day = date.getDate();
